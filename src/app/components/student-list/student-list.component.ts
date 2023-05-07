@@ -44,36 +44,64 @@ export class StudentListComponent implements OnInit {
     });
   }
 
-  search(): void {
-    if (this.searchTerm.trim() === '') {
-      this.filteredStudents = this.students;
-    } else {
-      this.filteredStudents = this.students.filter((student) =>
-        student.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-      );
+  searchByName(students: any[]): any[] {
+    if (!this.searchTerm) {
+      return students;
     }
+
+    return students.filter((student) =>
+      student.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
 
-  filter(): void {
+  filterByFinancial(students: any[]): any[] {
     const filterNumber = parseFloat(this.filterValue.toString());
-  
+
     if (isNaN(filterNumber)) {
-      this.filteredStudents = this.students;
-    } else {
-      this.filteredStudents = this.students.filter((student) => {
-        switch (this.comparison) {
-          case 'less':
-            return student[this.selectedField] < filterNumber;
-          case 'equal':
-            return student[this.selectedField] === filterNumber;
-          case 'greater':
-            return student[this.selectedField] > filterNumber;
-          default:
-            return true;
-        }
-      });
+      return students;
     }
+
+    return students.filter((student) => {
+      switch (this.comparison) {
+        case 'less':
+          return student[this.selectedField] < filterNumber;
+        case 'equal':
+          return student[this.selectedField] === filterNumber;
+        case 'greater':
+          return student[this.selectedField] > filterNumber;
+        default:
+          return true;
+      }
+    });
+  } 
+
+  applyFilters(): void {
+    const nameFilteredStudents = this.searchByName(this.students);
+    this.filteredStudents = this.filterByFinancial(nameFilteredStudents);
   }
+  
+  sortTable(column: string): void {
+    const sortOrder = this.sortOrders[column] = !this.sortOrders[column];
+    this.filteredStudents = this.filteredStudents.sort((a, b) => {
+      if (a[column] < b[column]) {
+        return sortOrder ? -1 : 1;
+      }
+      if (a[column] > b[column]) {
+        return sortOrder ? 1 : -1;
+      }
+      return 0;
+    });
+  }
+
+  sortOrders: { [key: string]: boolean } = {
+    id: true,
+    name: true,
+    balance: true,
+    financialAid: true,
+    tuition: true,
+    fees: true,
+    scholarships: true,
+  };
   
   
   

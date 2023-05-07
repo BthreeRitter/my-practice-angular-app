@@ -1,4 +1,9 @@
-<input [(ngModel)]="searchTerm" (input)="search()" placeholder="Search by name">
+<input
+  [(ngModel)]="searchTerm"
+  (input)="applyFilters()"
+  class="form-control"
+  placeholder="Search by name"
+/>
 
 <br/>
 <br/>
@@ -9,27 +14,30 @@
     <option value="tuition">Tuition</option>
     <option value="fees">Fees</option>
     <option value="scholarships">Scholarships</option>
-  </select>
+</select>
   
-  <input type="radio" [(ngModel)]="comparison" value="less" name="comparison"> Less than
-  <input type="radio" [(ngModel)]="comparison" value="equal" name="comparison"> Equal to
-  <input type="radio" [(ngModel)]="comparison" value="greater" name="comparison"> Greater than
+<input type="radio" [(ngModel)]="comparison" value="less" name="comparison"> Less than
+<input type="radio" [(ngModel)]="comparison" value="equal" name="comparison"> Equal to
+<input type="radio" [(ngModel)]="comparison" value="greater" name="comparison"> Greater than
   
-  <input [(ngModel)]="filterValue" (input)="filter()" placeholder="Filter value">
-  
-  <br/>
+<input [(ngModel)]="filterValue" placeholder="Filter value">
+
+<!-- Add the "Apply Filters" button after the "Filter value" input element -->
+<button (click)="applyFilters()">Apply Filters</button>
+
+<br/>
 <br/>
 
 <table>
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Balance</th>
-        <th>Financial Aid</th>
-        <th>Tuition</th>
-        <th>Fees</th>
-        <th>Scholarships</th>
+        <th (click)="sortTable('id')">ID</th>
+        <th (click)="sortTable('name')">Name</th>
+        <th (click)="sortTable('balance')">Balance</th>
+        <th (click)="sortTable('financialAid')">Financial Aid</th>
+        <th (click)="sortTable('tuition')">Tuition</th>
+        <th (click)="sortTable('fees')">Fees</th>
+        <th (click)="sortTable('scholarships')">Scholarships</th>
         <th></th> <!-- Add an extra table header column -->
       </tr>
     </thead>
