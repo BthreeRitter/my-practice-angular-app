@@ -1,0 +1,70 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Financial Aid</th>
+        <th>Tuition</th>
+        <th>Fees</th>
+        <th>Scholarships</th>
+        <th></th> <!-- Add an extra table header column -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.balance }}</td>
+        <td>{{ student.financialAid }}</td>
+        <td>{{ student.tuition }}</td>
+        <td>{{ student.fees }}</td>
+        <td>{{ student.scholarships }}</td>
+        <td> <!-- Add an extra table cell -->
+          <button (click)="editStudent(student)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <br />
+  <br />
+  <br />
+  
+  <div *ngIf="selectedStudent">
+    <h2>Edit Student</h2>
+    <form (submit)="onSubmit()" name="editStudentForm">
+      <!-- Add form fields for editing student data -->
+      <label>
+        Name:
+        <input [(ngModel)]="selectedStudent.name" name="name" required />
+      </label>
+      <label>
+        Balance:
+        <input [(ngModel)]="selectedStudent.balance" name="balance" required />
+      </label>
+      <label>
+        Financial Aid:
+        <input [(ngModel)]="selectedStudent.financialAid" name="financialAid" required />
+      </label>
+      <label>
+        Tuition:
+        <input [(ngModel)]="selectedStudent.tuition" name="tuition" required />
+      </label>
+      <label>
+        Fees:
+        <input [(ngModel)]="selectedStudent.fees" name="fees" required />
+      </label>
+      <label>
+        Scholarships:
+        <input [(ngModel)]="selectedStudent.scholarships" name="scholarships" required />
+      </label>
+      <!-- Add more form fields for other properties if necessary -->
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  
+
+  
+  

@@ -1,0 +1,363 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "balance": 1000,
+      "financialAid": 5000,
+      "tuition": 10000,
+      "fees": 2000,
+      "scholarships": 3000
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "balance": 2500,
+      "financialAid": 6000,
+      "tuition": 12000,
+      "fees": 2500,
+      "scholarships": 3500
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "balance": 1500,
+      "financialAid": 5500,
+      "tuition": 11000,
+      "fees": 2200,
+      "scholarships": 3200
+    },
+    {
+      "id": 4,
+      "name": "Emily Williams",
+      "balance": 1800,
+      "financialAid": 4500,
+      "tuition": 10500,
+      "fees": 2300,
+      "scholarships": 2700
+    },
+    {
+      "id": 5,
+      "name": "Sarah Brown",
+      "balance": 2200,
+      "financialAid": 5800,
+      "tuition": 11500,
+      "fees": 2400,
+      "scholarships": 3400
+    },
+    {
+        "id": 6,
+        "name": "William Davis",
+        "balance": 1200,
+        "financialAid": 5000,
+        "tuition": 10000,
+        "fees": 2000,
+        "scholarships": 3000
+      },
+      {
+        "id": 7,
+        "name": "Olivia Garcia",
+        "balance": 3200,
+        "financialAid": 6500,
+        "tuition": 13000,
+        "fees": 2700,
+        "scholarships": 4000
+      },
+      {
+        "id": 8,
+        "name": "Ethan Hernandez",
+        "balance": 1000,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 9,
+        "name": "Sophia Martinez",
+        "balance": 2800,
+        "financialAid": 6000,
+        "tuition": 12000,
+        "fees": 2500,
+        "scholarships": 3500
+      },
+      {
+        "id": 10,
+        "name": "Mason Brown",
+        "balance": 2000,
+        "financialAid": 5500,
+        "tuition": 11000,
+        "fees": 2200,
+        "scholarships": 3200
+      },
+      {
+        "id": 11,
+        "name": "Ava Rodriguez",
+        "balance": 1500,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 12,
+        "name": "Jacob Wilson",
+        "balance": 1700,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 13,
+        "name": "Isabella Anderson",
+        "balance": 2400,
+        "financialAid": 5800,
+        "tuition": 11500,
+        "fees": 2400,
+        "scholarships": 3400
+      },
+      {
+        "id": 14,
+        "name": "Noah Thomas",
+        "balance": 1300,
+        "financialAid": 5000,
+        "tuition": 10000,
+        "fees": 2000,
+        "scholarships": 3000
+      },
+      {
+        "id": 15,
+        "name": "Mia Jackson",
+        "balance": 3100,
+        "financialAid": 6500,
+        "tuition": 13000,
+        "fees": 2700,
+        "scholarships": 4000
+      },
+      {
+        "id": 16,
+        "name": "Liam Baker",
+        "balance": 900,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 17,
+        "name": "Charlotte Mitchell",
+        "balance": 1900,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 18,
+        "name": "Henry Perez",
+        "balance": 2900,
+        "financialAid": 6000,
+        "tuition": 12000,
+        "fees": 2500,
+        "scholarships": 3500
+      },
+      {
+        "id": 19,
+        "name": "Elizabeth Turner",
+        "balance": 1700,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 20,
+        "name": "Gabriel Lee",
+        "balance": 2100,
+        "financialAid": 5800,
+        "tuition": 11500,
+        "fees": 2400,
+        "scholarships": 3400
+      },
+      {
+        "id": 21,
+        "name": "Madison Scott",
+        "balance": 1200,
+        "financialAid": 5000,
+        "tuition": 10000,
+        "fees": 2000,
+        "scholarships": 3000
+      },
+      {
+        "id": 22,
+        "name": "Lucas King",
+        "balance": 3500,
+        "financialAid": 6500,
+        "tuition": 13000,
+        "fees": 2700,
+        "scholarships": 4000
+      },
+      {
+        "id": 23,
+        "name": "Chloe Cooper",
+        "balance": 1400,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 24,
+        "name": "Alexander Allen",
+        "balance": 1600,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 25,
+        "name": "Natalie Turner",
+        "balance": 2600,
+        "financialAid": 6000,
+        "tuition": 12000,
+        "fees": 2500,
+        "scholarships": 3500
+      },
+      {
+        "id": 26,
+        "name": "William Rodriguez",
+        "balance": 800,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 27,
+        "name": "Avery Hernandez",
+        "balance": 2000,
+        "financialAid": 5500,
+        "tuition": 11000,
+        "fees": 2200,
+        "scholarships": 3200
+      },
+      {
+        "id": 28,
+        "name": "Evelyn Moore",
+        "balance": 1900,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 29,
+        "name": "Daniel Parker",
+        "balance": 2200,
+        "financialAid": 5800,
+        "tuition": 11500,
+        "fees": 2400,
+        "scholarships": 3400
+      },
+      {
+        "id": 30,
+        "name": "Mia Davis",
+        "balance": 1200,
+        "financialAid": 5000,
+        "tuition": 10000,
+        "fees": 2000,
+        "scholarships": 3000
+      },
+      {
+        "id": 31,
+        "name": "Carter Collins",
+        "balance": 3200,
+        "financialAid": 6500,
+        "tuition": 13000,
+        "fees": 2700,
+        "scholarships": 4000
+      },
+      {
+        "id": 32,
+        "name": "Addison Cooper",
+        "balance": 1400,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 33,
+        "name": "Christopher Allen",
+        "balance": 1600,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 34,
+        "name": "Aaliyah Adams",
+        "balance": 2600,
+        "financialAid": 6000,
+        "tuition": 12000,
+        "fees": 2500,
+        "scholarships": 3500
+      },
+      {
+        "id": 35,
+        "name": "Sebastian Edwards",
+        "balance": 800,
+        "financialAid": 4000,
+        "tuition": 9500,
+        "fees": 1800,
+        "scholarships": 2500
+      },
+      {
+        "id": 36,
+        "name": "Brianna Gonzalez",
+        "balance": 2000,
+        "financialAid": 5500,
+        "tuition": 11000,
+        "fees": 2200,
+        "scholarships": 3200
+      },
+      {
+        "id": 37,
+        "name": "Christian Parker",
+        "balance": 1900,
+        "financialAid": 4500,
+        "tuition": 10500,
+        "fees": 2300,
+        "scholarships": 2700
+      },
+      {
+        "id": 38,
+        "name": "Aubrey Flores",
+        "balance": 2200,
+        "financialAid": 5800,
+        "tuition": 11500,
+        "fees": 2400,
+        "scholarships": 3400
+      },
+      {
+        "id": 39,
+        "name": "Frank Flores",
+        "balance": 1300,
+        "financialAid": 8000,
+        "tuition": 25000,
+        "fees": 7000,
+        "scholarships": 12000
+      },
+      {
+        "id": 40,
+        "name": "Diamond Jones",
+        "balance": 18000,
+        "financialAid": 7500,
+        "tuition": 15000,
+        "fees": 4000,
+        "scholarships": 0
+      }
+  ]
+  
