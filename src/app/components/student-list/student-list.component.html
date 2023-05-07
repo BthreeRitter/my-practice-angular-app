@@ -1,3 +1,25 @@
+<input [(ngModel)]="searchTerm" (input)="search()" placeholder="Search by name">
+
+<br/>
+<br/>
+
+<select [(ngModel)]="selectedField">
+    <option value="balance">Balance</option>
+    <option value="financialAid">Financial Aid</option>
+    <option value="tuition">Tuition</option>
+    <option value="fees">Fees</option>
+    <option value="scholarships">Scholarships</option>
+  </select>
+  
+  <input type="radio" [(ngModel)]="comparison" value="less" name="comparison"> Less than
+  <input type="radio" [(ngModel)]="comparison" value="equal" name="comparison"> Equal to
+  <input type="radio" [(ngModel)]="comparison" value="greater" name="comparison"> Greater than
+  
+  <input [(ngModel)]="filterValue" (input)="filter()" placeholder="Filter value">
+  
+  <br/>
+<br/>
+
 <table>
     <thead>
       <tr>
@@ -12,7 +34,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let student of students">
+        <tr *ngFor="let student of filteredStudents; let i = index">
         <td>{{ student.id }}</td>
         <td>{{ student.name }}</td>
         <td>{{ student.balance }}</td>

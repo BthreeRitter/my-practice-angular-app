@@ -7,10 +7,13 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class StudentService {
+  // Define the location of the JSON file containing student data.
   private studentsUrl = 'assets/students.json';
 
+  // Inject the HttpClient module to make HTTP requests to the server.
   constructor(private http: HttpClient) {}
 
+  // Retrieve student data from the JSON file and return an Observable of any data type containing the student data.
   getStudents(): Observable<any> {
     return this.http.get<any>(this.studentsUrl);
   }
