@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Renderer2, ElementRef } from '@angular/core';
 import { StudentService } from '../../services/student.service';
 
 @Component({
@@ -14,20 +15,23 @@ export class StudentListComponent implements OnInit {
   filteredStudents: any[] = [];
   selectedField: string = 'balance';
   comparison: string = 'less';
-  filterValue: number = 0;
+  filterValue: number | null = null;
 
 
-  constructor(private studentService: StudentService) {}
+  constructor(private studentService: StudentService, private el: ElementRef) {}
+  
 
   ngOnInit(): void {
     this.studentService.getStudents().subscribe((students) => {
       this.students = students;
-      this.filteredStudents = students; 
+      this.filteredStudents = students;
     });
   }
 
   editStudent(student: any): void {
     this.selectedStudent = { ...student }; // Create a copy of the student object
+  
+    this.scrollToEditDiv();
   }
 
   onSubmit(): void {
@@ -35,14 +39,47 @@ export class StudentListComponent implements OnInit {
     this.studentService.updateStudent(this.selectedStudent).subscribe((updatedStudent) => {
       // Find the index of the updated student in the students array
       const index = this.students.findIndex((student) => student.id === updatedStudent.id);
-
+  
       // Update the students array with the new data
       this.students[index] = updatedStudent;
-
+  
       // Reset the selectedStudent to hide the form
       this.selectedStudent = null;
+  
+      // Scroll back to the edited student row
+      this.scrollToStudentList(updatedStudent.id);
     });
   }
+
+  scrollToEditDiv() {
+    setTimeout(() => {
+      const editDiv = this.el.nativeElement.querySelector('.mt-5');
+      if (editDiv) {
+        editDiv.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0);
+  }
+  
+  scrollToStudentList(studentId: number) {
+    setTimeout(() => {
+      const studentRow = this.el.nativeElement.querySelector(`.student-row[data-student-id="${studentId}"]`);
+      if (studentRow) {
+        studentRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  
+        // Add the 'flash' class after scrolling
+        setTimeout(() => {
+          studentRow.classList.add('flash');
+  
+          // Remove the 'flash' class after the animation has finished
+          setTimeout(() => {
+            studentRow.classList.remove('flash');
+          }, 1000); // The duration of the flash animation
+        }, 1000); // Adjust this value if needed to ensure the flash starts after the scroll is complete
+      }
+    }, 0);
+  }
+  
+  
 
   searchByName(students: any[]): any[] {
     if (!this.searchTerm) {
@@ -55,12 +92,16 @@ export class StudentListComponent implements OnInit {
   }
 
   filterByFinancial(students: any[]): any[] {
+    if (this.filterValue === null) {
+      return students;
+    }
+  
     const filterNumber = parseFloat(this.filterValue.toString());
-
+  
     if (isNaN(filterNumber)) {
       return students;
     }
-
+  
     return students.filter((student) => {
       switch (this.comparison) {
         case 'less':
@@ -73,7 +114,8 @@ export class StudentListComponent implements OnInit {
           return true;
       }
     });
-  } 
+  }
+  
 
   applyFilters(): void {
     const nameFilteredStudents = this.searchByName(this.students);

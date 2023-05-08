@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Import Bootstrap CSS */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* CMU Colors */
+:root {
+  --cmu-red: #A6192E;
+  --cmu-gray: #504846;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: var(--cmu-red);
+  padding: 20px;
+}
+
+header img {
+  width: 200px;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h1,
+h2 {
+  color: var(--cmu-gray);
+}
+
+button {
+  background-color: var(--cmu-red);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #721822;
+}
+
+th {
+  cursor: pointer;
+}

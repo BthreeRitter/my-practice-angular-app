@@ -1,0 +1,15 @@
+@keyframes flash {
+    0%, 33%, 100% {
+      background-color: transparent;
+    }
+    16%, 50% {
+      background-color: rgba(255, 255, 0, 0.5); /* Change this color if desired */
+    }
+  }
+  
+  
+  .flash {
+    animation: flash 2s 1; /* Adjust the duration and iteration count if needed */
+  }
+  
+  
